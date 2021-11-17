@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import * as dayjs from "dayjs";
+import * as advancedFormat from "dayjs/plugin/advancedFormat";
+
+dayjs.extend(advancedFormat);
 
 const StyledTable = styled.table`
   background: white;
@@ -45,6 +49,10 @@ const StyledData = styled.td`
   }};
 `;
 
+const formatDate = (dateStr) => {
+  return dayjs(dateStr).format("MMM Do, YYYY");
+};
+
 export default function Table({ className, total, transactions }) {
   return (
     <div className={className}>
@@ -66,7 +74,7 @@ export default function Table({ className, total, transactions }) {
             // Since we're not moving rows around index is ok to use
             return (
               <StyledRow index={i} key={i}>
-                <StyledData {...props}>{el.Date}</StyledData>
+                <StyledData {...props}>{formatDate(el.Date)}</StyledData>
                 <StyledData isMain {...props}>
                   {el.Company}
                 </StyledData>
