@@ -1,12 +1,20 @@
+import React from "react";
+import Header from "./components/Header";
+import Table from "./components/Table";
+
+import styled from "styled-components";
+
+const StyledTable = styled(Table)`
+  margin: 16px;
+  margin-bottom: 0px;
+`;
+
 function App() {
   return (
-    <div className="App">
-      <img
-        src="https://resttest.bench.co/assets/files/bench-test.png"
-        height="500"
-        alt="mock"
-      />
-    </div>
+    <>
+      <Header title="Bench Test" />
+      <StyledTable />
+    </>
   );
 }
 
