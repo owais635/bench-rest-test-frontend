@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import * as advancedFormat from "dayjs/plugin/advancedFormat";
+import advancedFormat from "dayjs/plugin/advancedFormat";
 
 // to use Day of Month with ordinal
 dayjs.extend(advancedFormat);

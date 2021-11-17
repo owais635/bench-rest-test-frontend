@@ -10,7 +10,7 @@ const StyledHeader = styled.header`
   align-items: center;
 `;
 
-export default function Header({ title }) {
+export default function Header({ title = "" }) {
   return (
     <StyledHeader>
       <p>{title}</p>

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should render 1`] = `
+<div
+  className="sc-bdvvtL hKApSm"
+>
+  <h2>
+    Loading...
+  </h2>
+</div>
+`;

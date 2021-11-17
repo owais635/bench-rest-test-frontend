@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionTable should render with transactions and total 1`] = `
+<div>
+  <table
+    className="sc-bdvvtL bwuafT"
+  >
+    <thead>
+      <tr
+        className="sc-gsDKAQ gkZXEZ"
+      >
+        <th>
+          Date
+        </th>
+        <th>
+          Company
+        </th>
+        <th>
+          Account
+        </th>
+        <th>
+          -$580.49
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="sc-dkPtRN dcSQPR"
+      >
+        <td
+          className="sc-hKwDye hOpPvv"
+        />
+        <td
+          className="sc-hKwDye jRYIYl"
+        >
+          LONDON DRUGS 78 POSTAL VANCOUVER BC
+        </td>
+        <td
+          className="sc-hKwDye hOpPvv"
+        >
+          Insurance Expense
+        </td>
+        <td
+          className="sc-hKwDye jRYIYl"
+        >
+          $117.81
+        </td>
+      </tr>
+      <tr
+        className="sc-dkPtRN dcSQPR"
+      >
+        <td
+          className="sc-hKwDye hOpPvv"
+        />
+        <td
+          className="sc-hKwDye jRYIYl"
+        >
+          ECHOSIGN xxxxxxxx6744 CA xx8.80 USD @ xx0878
+        </td>
+        <td
+          className="sc-hKwDye hOpPvv"
+        >
+          Equipment Expense
+        </td>
+        <td
+          className="sc-hKwDye jRYIYl"
+        >
+          $520.85
+        </td>
+      </tr>
+      <tr
+        className="sc-dkPtRN dcSQPR"
+      >
+        <td
+          className="sc-hKwDye hOpPvv"
+        />
+        <td
+          className="sc-hKwDye jRYIYl"
+        >
+          APPLE STORE #R280 VANCOUVER BC
+        </td>
+        <td
+          className="sc-hKwDye hOpPvv"
+        >
+          Equipment Expense
+        </td>
+        <td
+          className="sc-hKwDye jRYIYl"
+        >
+          $58.17
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
