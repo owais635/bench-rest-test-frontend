@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const StyledHeader = styled.header`
   background: ${(props) => props.theme.primary};
+  padding: 8px;
   color: white;
   display: flex;
   justify-content: center;

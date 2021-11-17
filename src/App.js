@@ -5,7 +5,7 @@ import Table from "./components/Table";
 import styled from "styled-components";
 
 const StyledTable = styled(Table)`
-  margin: 16px;
+  margin: 32px;
   margin-bottom: 0px;
 `;
 
