@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import * as dayjs from "dayjs";
-import * as advancedFormat from "dayjs/plugin/advancedFormat";
-
-dayjs.extend(advancedFormat);
+import { formatDate } from "../utils/dateFormatter";
 
 const StyledTable = styled.table`
   background: white;
@@ -48,10 +45,6 @@ const StyledData = styled.td`
     return isMain ? theme.mainText : theme.secondaryText;
   }};
 `;
-
-const formatDate = (dateStr) => {
-  return dayjs(dateStr).format("MMM Do, YYYY");
-};
 
 export default function Table({ className, total, transactions }) {
   return (

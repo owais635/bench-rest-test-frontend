@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
  * @param {function} callback callback to fetch.
  * @returns loading status, if error occurred, and json data from the fetch.
  */
-export function useFetch(callback) {
+export function useMakeRequest(callback) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasErrorOccurred, setHasErrorOccurred] = useState(false);
   const [data, setData] = useState(null);

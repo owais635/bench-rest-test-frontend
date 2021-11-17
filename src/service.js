@@ -26,8 +26,7 @@ export async function getTransactions() {
     pageNumber += 1;
 
     try {
-      //   let { transactions } = await getTransactionsApi(pageNumber);
-    //   throw Error("hello");
+      let { transactions } = await getTransactionsApi(pageNumber);
       count += transactions.length;
       allTransactions = [...allTransactions, ...transactions];
     } catch (err) {

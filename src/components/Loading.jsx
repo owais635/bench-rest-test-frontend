@@ -1,9 +1,17 @@
 import React from "react";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  align-items: center;
+`;
 
 export default function Loading() {
   return (
-    <div>
-      <h4>Loading...</h4>
-    </div>
+    <Container>
+      <h2>Loading...</h2>
+    </Container>
   );
 }
