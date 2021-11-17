@@ -1,33 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const data = [
-  {
-    date: "2013-12-22", // String, date of transaction
-    company: "The ABC Company",
-    ledger: "Phone & Internet Expense", // String, ledger name
-    amount: 13381.98, // String, amount
-  },
-  {
-    date: "2013-12-22", // String, date of transaction
-    company: "The ABC Company",
-    ledger: "Phone & Internet Expense", // String, ledger name
-    amount: 5781.73, // String, amount
-  },
-  {
-    date: "2013-12-22", // String, date of transaction
-    company: "The ABC Company",
-    ledger: "Phone & Internet Expense", // String, ledger name
-    amount: 2141.22, // String, amount
-  },
-  {
-    date: "2013-12-22", // String, date of transaction
-    company: "The ABC Company",
-    ledger: "Phone & Internet Expense", // String, ledger name
-    amount: 2141.22, // String, amount
-  },
-];
-
 const StyledTable = styled.table`
   background: white;
   width: 100%;
@@ -63,37 +36,48 @@ const StyledRow = styled.tr`
   }
 `;
 
-const StyledSecondaryData = styled.td`
-  color: ${({ index, theme }) =>
-    index % 2 === 1 ? theme.primary : theme.secondaryText};
+const StyledData = styled.td`
+  ${(props) => (props.isMain ? " font-weight: bold;" : "")}
+
+  color: ${({ isMain, isGain, theme }) => {
+    if (isGain) return theme.primary;
+    return isMain ? theme.mainText : theme.secondaryText;
+  }};
 `;
 
-const StyledMainData = styled.td`
-  font-weight: bold;
-  color: ${({ index, theme }) =>
-    index % 2 === 1 ? theme.primary : theme.mainText};
-`;
-
-export default function Table({ className }) {
-  const total = 1729;
+export default function Table({ className, total, transactions }) {
   return (
     <div className={className}>
       <StyledTable>
-        <StyledHeader>
-          <th>Date</th>
-          <th>Company</th>
-          <th>Account</th>
-          <th>{`$${total}`}</th>
-        </StyledHeader>
+        <thead>
+          <StyledHeader>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Account</th>
+            <th>{`$${total.toFixed(2)}`}</th>
+          </StyledHeader>
+        </thead>
 
-        {data.map((el, i) => (
-          <StyledRow index={i}>
-            <StyledSecondaryData index={i}>{el.date}</StyledSecondaryData>
-            <StyledMainData index={i}>{el.company}</StyledMainData>
-            <StyledSecondaryData index={i}>{el.ledger}</StyledSecondaryData>
-            <StyledMainData index={i}>{el.amount}</StyledMainData>
-          </StyledRow>
-        ))}
+        <tbody>
+          {transactions.map((el, i) => {
+            const props = { isGain: el.Amount > 0 };
+
+            // ideally key should be a unique id and not just index.
+            // Since we're not moving rows around index is ok to use
+            return (
+              <StyledRow index={i} key={i}>
+                <StyledData {...props}>{el.Date}</StyledData>
+                <StyledData isMain {...props}>
+                  {el.Company}
+                </StyledData>
+                <StyledData {...props}>{el.Ledger}</StyledData>
+                <StyledData isMain {...props}>
+                  {el.Amount}
+                </StyledData>
+              </StyledRow>
+            );
+          })}
+        </tbody>
       </StyledTable>
     </div>
   );
