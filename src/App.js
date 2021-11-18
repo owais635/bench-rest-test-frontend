@@ -6,7 +6,7 @@ import Table from "./components/TransactionTable";
 import Error from "./components/Error";
 import Loading from "./components/Loading";
 import { useMakeRequest } from "./hooks/useMakeRequest";
-import { getTransactions, getTransactionTotal } from "./service";
+import { getTransactions, getTransactionTotal } from "./services/transactions";
 
 const StyledTable = styled(Table)`
   margin: 32px;
