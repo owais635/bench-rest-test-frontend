@@ -9,7 +9,9 @@ Assessment Requirements: https://resttest.bench.co/front-end
 - To **run the app locally**, run the command `yarn start`.
 
 ### Testing the App:
-- To run tests, run the command `yarn test --watchAll`.
+- To run tests, run the command `yarn test`.
+- To run tests (in watch mode), run the command `yarn test:watch`.
+
 
 ### Screenshot
 <img height="500px" src="https://user-images.githubusercontent.com/25351744/142301765-c3b404a4-21f3-4e82-8986-eb88fd9a65c0.png" />
