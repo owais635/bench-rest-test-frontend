@@ -3,7 +3,7 @@
 Made using: https://resttest.bench.co/front-end
 
 ## Instructions for running/testing:
-- Make sure that you have `Node.js` installed.
+- Make sure that you have `Node.js` and `Yarn` installed.
 - Clone this repo.
 - To install the dependencies, run the command `yarn`.
 - To **run the app locally**, run the command `yarn start`.
